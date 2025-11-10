@@ -1,8 +1,9 @@
-'use client';
+"use client"
 
-import { useMemo } from "react";
-import { motion } from "motion/react";
+import { useMemo } from "react"
+import { motion } from "motion/react"
 
+<<<<<<< HEAD:registry/hax-ui/sidebar/components/sidebar/tab-bars.tsx
 import { useTheme } from "@/components/theme/theme-provider";
 import { MenuButton } from "@/components/sidebar/menu-button";
 import { SearchIconButton } from "@/components/sidebar/search-icon-button";
@@ -24,9 +25,28 @@ export function TabBars({ activeItem, onItemClick, onMenuClick }: TabBarsProps) 
   const isDark = theme === "dark";
 
   const mainNavItems = useMemo(
+=======
+import { MenuButton } from "@/components/sidebar/menu-button"
+import { SearchIconButton } from "@/components/sidebar/search-icon-button"
+import { ToolbarTabItem } from "@/components/sidebar/toolbar-tab-item"
+import { UserAvatar } from "@/components/sidebar/user-avatar"
+import { MAIN_NAVIGATION } from "@/lib/sidebar/navigation"
+import { STAGGER_DELAYS, STAGGER_DURATION, STAGGER_EASING } from "@/lib/sidebar/stagger"
+import { createStaggerDelay } from "@/lib/utils/animations"
+import type { NavigationItemId } from "@/types/navigation"
+
+interface ToolbarContentProps {
+  activeItem: NavigationItemId
+  onItemClick: (id: NavigationItemId) => void
+  onMenuClick: () => void
+}
+
+export function ToolbarContent({ activeItem, onItemClick, onMenuClick }: ToolbarContentProps) {
+  const toolbarNavItems = useMemo(
+>>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af:components/sidebar/toolbar-content.tsx
     () => MAIN_NAVIGATION.filter((item) => item.id !== "settings" && item.id !== "search"),
-    []
-  );
+    [],
+  )
 
   const shadowStyle = useMemo(
     () => ({
@@ -65,7 +85,7 @@ export function TabBars({ activeItem, onItemClick, onMenuClick }: TabBarsProps) 
       </motion.div>
 
       <nav className="flex items-center gap-1 rounded-[425px]" aria-label="Main navigation">
-        {mainNavItems.map((item, index) => (
+        {toolbarNavItems.map((item, index) => (
           <motion.div
             key={item.id}
             initial={{ opacity: 0, y: -4 }}
@@ -76,6 +96,7 @@ export function TabBars({ activeItem, onItemClick, onMenuClick }: TabBarsProps) 
               ease: STAGGER_EASING.popIn,
             }}
           >
+<<<<<<< HEAD:registry/hax-ui/sidebar/components/sidebar/tab-bars.tsx
             <TabBarsTabItem
               label={item.label}
               isActive={activeItem === item.id}
@@ -107,6 +128,12 @@ export function TabBars({ activeItem, onItemClick, onMenuClick }: TabBarsProps) 
           ))}
         </nav>
       )}
+=======
+            <ToolbarTabItem label={item.label} isActive={activeItem === item.id} onClick={() => onItemClick(item.id)} />
+          </motion.div>
+        ))}
+      </nav>
+>>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af:components/sidebar/toolbar-content.tsx
 
       <div className="flex-1 min-w-[8px]" aria-hidden="true" />
 
@@ -124,6 +151,6 @@ export function TabBars({ activeItem, onItemClick, onMenuClick }: TabBarsProps) 
         <SearchIconButton onClick={() => onItemClick("search")} />
       </motion.div>
     </div>
-  );
+  )
 }
 

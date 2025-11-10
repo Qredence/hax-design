@@ -5,8 +5,13 @@ export const MORPH_TIMING = {
   sidebarExitDuration: 0.12, // Faster exit for snappier feel
   sidebarEnterDuration: 0.35, // Slightly longer for smoother entrance
   sidebarEnterDelay: 0.02, // Minimal delay
+<<<<<<< HEAD
   tabBarsEnterDuration: 0.25, // Balanced tab bars appearance
   tabBarsEnterDelay: 0,
+=======
+  toolbarEnterDuration: 0.25, // Balanced toolbar appearance
+  toolbarEnterDelay: 0,
+>>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af
   shadowDuration: 0.35, // Synchronized with sidebar
   scaleDuration: 0.4, // Faster scale for better sync
 } as const
@@ -38,9 +43,15 @@ export const MORPH_TRANSITION = {
     delay: MORPH_TIMING.sidebarEnterDelay,
     ease: [0.16, 1, 0.3, 1], // Smooth ease-in with slight overshoot
   } satisfies Transition,
+<<<<<<< HEAD
   tabBarsContentEnter: {
     duration: MORPH_TIMING.tabBarsEnterDuration,
     delay: MORPH_TIMING.tabBarsEnterDelay,
+=======
+  toolbarContentEnter: {
+    duration: MORPH_TIMING.toolbarEnterDuration,
+    delay: MORPH_TIMING.toolbarEnterDelay,
+>>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af
     ease: [0, 0, 0.2, 1], // Smooth entrance
   } satisfies Transition,
   scale: {

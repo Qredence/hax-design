@@ -4,7 +4,11 @@ import { useState, useEffect, useCallback, useRef } from "react"
 
 export function useNavigationMorph(contentSwitchDelay = 300) {
   const [isCollapsed, setIsCollapsed] = useState(false)
+<<<<<<< HEAD
   const [showTabBarsContent, setShowTabBarsContent] = useState(false)
+=======
+  const [showToolbarContent, setShowToolbarContent] = useState(false)
+>>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af
   const timerRef = useRef<NodeJS.Timeout | null>(null)
   const isTransitioningRef = useRef(false)
 
@@ -38,6 +42,7 @@ export function useNavigationMorph(contentSwitchDelay = 300) {
     }
 
     if (isCollapsed) {
+<<<<<<< HEAD
       // Show tab bars content after delay
       timerRef.current = setTimeout(() => {
         setShowTabBarsContent(true)
@@ -45,6 +50,15 @@ export function useNavigationMorph(contentSwitchDelay = 300) {
     } else {
       // Hide tab bars content immediately when expanding
       setShowTabBarsContent(false)
+=======
+      // Show toolbar content after delay
+      timerRef.current = setTimeout(() => {
+        setShowToolbarContent(true)
+      }, contentSwitchDelay)
+    } else {
+      // Hide toolbar content immediately when expanding
+      setShowToolbarContent(false)
+>>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af
     }
 
     return () => {

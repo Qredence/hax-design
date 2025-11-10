@@ -9,7 +9,11 @@ import { UserProfile } from "@/components/sidebar/user-profile"
 import { useTheme } from "@/components/theme/theme-provider"
 import { containerVariantsDelayed, itemVariantsFromBottom } from "@/lib/sidebar/animations"
 import { FOOTER_LINKS } from "@/lib/sidebar/navigation"
+<<<<<<< HEAD
 import type { NavigationProps } from "@/lib/sidebar/navigation"
+=======
+import type { NavigationProps } from "@/types/navigation"
+>>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af
 
 interface SidebarFooterProps extends NavigationProps {
   isCollapsed?: boolean

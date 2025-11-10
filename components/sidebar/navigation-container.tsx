@@ -5,7 +5,11 @@ import { useMemo } from "react"
 
 import { FloatingLogo } from "@/components/sidebar/floating-logo"
 import { SidebarContent } from "@/components/sidebar/sidebar-content"
+<<<<<<< HEAD
 import { TabBarsContent } from "@/components/sidebar/tab-bars-content"
+=======
+import { ToolbarContent } from "@/components/sidebar/toolbar-content"
+>>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af
 import { useTheme } from "@/components/theme/theme-provider"
 import { MORPH_SCALE_VALUES, MORPH_TIMING, MORPH_TRANSITION } from "@/lib/sidebar/morph"
 import { useNavigationMorph } from "@/lib/sidebar/hooks/use-navigation-morph"
@@ -14,7 +18,11 @@ import { getShadow } from "@/lib/utils/animations"
 
 export function NavigationContainer() {
   const { activeItem, setActiveItem } = useNavigationState()
+<<<<<<< HEAD
   const { isCollapsed, showTabBarsContent, toggleCollapse } = useNavigationMorph(MORPH_TIMING.contentSwitchDelay)
+=======
+  const { isCollapsed, showToolbarContent, toggleCollapse } = useNavigationMorph(MORPH_TIMING.contentSwitchDelay)
+>>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af
   const { theme } = useTheme()
   const isDark = theme === "dark"
 
@@ -52,7 +60,11 @@ export function NavigationContainer() {
         }}
         transition={MORPH_TRANSITION.container}
         style={containerStyle}
+<<<<<<< HEAD
         data-testid={isCollapsed ? "tab-bars" : "sidebar"}
+=======
+        data-testid={isCollapsed ? "toolbar" : "sidebar"}
+>>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af
         data-collapsed={isCollapsed}
       >
         <motion.div
@@ -89,7 +101,11 @@ export function NavigationContainer() {
           <AnimatePresence mode="wait">
             {showTabBarsContent ? (
               <motion.div
+<<<<<<< HEAD
                 key="tab-bars"
+=======
+                key="toolbar"
+>>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af
                 initial={{ opacity: 0, scale: 0.97 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.97 }}
@@ -102,6 +118,13 @@ export function NavigationContainer() {
                     duration: MORPH_TRANSITION.tabBarsContentEnter.duration,
                     ease: MORPH_TRANSITION.tabBarsContentEnter.ease,
                   },
+<<<<<<< HEAD
+=======
+                  scale: {
+                    duration: MORPH_TRANSITION.toolbarContentEnter.duration,
+                    ease: MORPH_TRANSITION.toolbarContentEnter.ease,
+                  },
+>>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af
                 }}
                 className="flex items-center"
                 style={{ gap: 6 }}

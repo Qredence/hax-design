@@ -6,7 +6,11 @@ import { ReactNode, memo } from "react";
 import { useTheme } from "@/components/theme/theme-provider";
 import { INTERACTION_ANIMATIONS, SPRING_CONFIG, TRANSITIONS } from "@/lib/sidebar/animations";
 import { getColor } from "@/lib/sidebar/theme";
+<<<<<<< HEAD
 import { NavigationVariant } from "@/lib/sidebar/navigation";
+=======
+import { NavigationVariant } from "@/types/navigation";
+>>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af
 
 interface SidebarNavItemProps {
   icon: ReactNode;
