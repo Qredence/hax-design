@@ -4,11 +4,7 @@ import { motion } from "motion/react"
 
 import { containerVariants, itemVariants } from "@/lib/sidebar/animations"
 import { MAIN_NAVIGATION } from "@/lib/sidebar/navigation"
-<<<<<<< HEAD
 import type { NavigationProps } from "@/lib/sidebar/navigation"
-=======
-import type { NavigationProps } from "@/types/navigation"
->>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af
 import { SidebarNavItem } from "@/components/sidebar/sidebar-nav-item"
 
 interface SidebarNavProps extends NavigationProps {

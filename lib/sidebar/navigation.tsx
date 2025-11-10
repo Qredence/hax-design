@@ -2,13 +2,9 @@
 
 import { Github, BookOpen, Search, Network, Grid3x3, Scale } from "lucide-react"
 import { SettingsIcon } from "@/components/sidebar/sidebar-icons"
-<<<<<<< HEAD
 import type { NavigationItem, NavigationSection, NavigationItemId } from "@/types/navigation"
 
 export type { NavigationItemId, NavigationVariant, NavigationItem, NavigationSection, NavigationProps } from "@/types/navigation"
-=======
-import type { NavigationItem, NavigationSection } from "@/types/navigation"
->>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af
 
 export const MAIN_NAVIGATION: NavigationItem[] = [
   {
@@ -33,11 +29,8 @@ export const MAIN_NAVIGATION: NavigationItem[] = [
   },
 ]
 
-<<<<<<< HEAD
 export const EXPLORE_NAVIGATION: NavigationItem[] = []
 
-=======
->>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af
 export const FOOTER_LINKS: NavigationItem[] = [
   {
     id: "settings",
@@ -62,8 +55,4 @@ export const NAVIGATION_SECTIONS: NavigationSection[] = [
   },
 ]
 
-<<<<<<< HEAD
 export const DEFAULT_ACTIVE_ITEM: NavigationItemId = "search"
-=======
-export const DEFAULT_ACTIVE_ITEM: NavigationItem["id"] = "search"
->>>>>>> 72f5e9a42557f609ed5df97c0146627fd02270af
