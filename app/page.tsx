@@ -7,7 +7,10 @@ export default function Home() {
       <header className="flex flex-col gap-1">
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-1">
-            <h1 className="text-3xl font-bold tracking-tight lowercase">haxdesign</h1>
+            <div className="flex items-center gap-2">
+              <h1 className="text-3xl font-bold tracking-tight lowercase">haxdesign</h1>
+              <span className="text-3xl font-bold tracking-tight lowercase opacity-64">Qredence</span>
+            </div>
             <p className="text-muted-foreground">
               A custom shadcn registry exposing the morphing navigation sidebar block.
             </p>
